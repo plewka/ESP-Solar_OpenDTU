@@ -1,0 +1,32 @@
+### Module positions - created on Sa 14 Jan 2023 15:26:21 CET ###
+### Printed by Pcbnew version 6.0.2+dfsg-1
+## Unit = mm, Angle = deg.
+## Side : bottom
+# Ref     Val                      Package                                   PosX       PosY       Rot  Side
+C1        100n                     C_0603_1608Metric                    -106.4260   -72.7980    0.0000  bottom
+C2        C_Polarized_Small        CP_EIA-3528-12_Kemet-T                -78.1050   -87.6300  -90.0000  bottom
+C3        100n                     C_0603_1608Metric                     -69.8500   -73.7870    0.0000  bottom
+C4        22uF/6.3V/20%/X5R/C0603  C_0603_1608Metric                     -88.1380   -82.9310  180.0000  bottom
+C5        C_Polarized_Small        CP_EIA-3528-12_Kemet-T                -84.0740   -47.7520  -90.0000  bottom
+C6        100n                     C_0603_1608Metric                     -86.6875   -46.9900  -90.0000  bottom
+C7        22uF/6.3V/20%/X5R/C0603  C_0603_1608Metric                     -96.6470   -94.8690    0.0000  bottom
+C8        C_Polarized              CP_EIA-7260-38_AVX-R                  -81.5900   -38.1000  180.0000  bottom
+C9        C_Polarized_Small        CP_EIA-3528-12_Kemet-T               -102.8700   -43.9555  -90.0000  bottom
+C10       22uF/6.3V/20%/X5R/C0603  C_0603_1608Metric                     -69.8500   -72.1360  180.0000  bottom
+D3        US1J                     D_SMA                                 -74.9300   -40.8940  -90.0000  bottom
+L1        FB0805/600R/2A           L_0805_2012Metric                     -83.1850   -86.9950   90.0000  bottom
+L2        FB0805/600R/2A           L_0805_2012Metric                     -93.4720   -97.6630    0.0000  bottom
+L3        FB0805/600R/2A           L_0805_2012Metric                    -100.8380   -34.8445   90.0000  bottom
+L4        FB0805/600R/2A           L_0805_2012Metric                     -69.7230   -60.5790  180.0000  bottom
+Q1        Q_NPN_BEC                SOT-23                                -65.9130   -56.3880  -90.0000  bottom
+R1        10k0                     R_0603_1608Metric                     -77.4700   -49.5300  -90.0000  bottom
+R2        10k0                     R_0603_1608Metric                     -80.0100   -50.8000  -90.0000  bottom
+R3        10k0                     R_0603_1608Metric                     -82.2960   -68.7070    0.0000  bottom
+R4        1k00                     R_0603_1608Metric                     -94.9960   -74.2950  -90.0000  bottom
+R5        1k00                     R_0603_1608Metric                    -106.4260   -76.0730  180.0000  bottom
+R6        1k/R0603                 R_0603_1608Metric                    -106.4260   -74.4220  180.0000  bottom
+R7        560R                     R_0603_1608Metric                     -96.7740   -74.2950   90.0000  bottom
+R8        1k00                     R_0603_1608Metric                     -69.4690   -53.7210  180.0000  bottom
+U1        DS2485                   DFN-6-1EP_3x3mm_P0.95mm_EP1.7x2.6mm   -72.3900   -50.8000    0.0000  bottom
+U2        ESP-WROOM-32             ESP32-WROOM-32E                      -100.3300   -60.8600   90.0000  bottom
+## End

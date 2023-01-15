@@ -1,0 +1,23 @@
+### Module positions - created on Sa 14 Jan 2023 15:26:21 CET ###
+### Printed by Pcbnew version 6.0.2+dfsg-1
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val                   Package                                                        PosX       PosY       Rot  Side
+D1        LED                   LED_D3.0mm_Clear                                            86.2280   -75.0570    0.0000  top
+D2        LED                   LED_D3.0mm_Clear                                           100.3250   -75.0570    0.0000  top
+D4        LED                   LED_D3.0mm_Clear                                            66.9340   -51.9430  180.0000  top
+FA1       Fuse                  Fuseholder_Cylinder-5x20mm_Bulgin_FX0456_Vertical_Closed    35.5600   -92.3290    0.0000  top
+FA2       Fuse                  Fuseholder_Cylinder-5x20mm_Bulgin_FX0456_Vertical_Closed    35.6870   -39.5220    0.0000  top
+PS1       HLK-PM03              Converter_ACDC_HiLink_HLK-PMxx                              51.6890   -86.6140    0.0000  top
+REL1      SRD-03                Relay_SPDT_SANYOU_SRD_Series_Form_C                         67.1830   -40.8940  180.0000  top
+RV1       Varistor              RV_Disc_D12mm_W4.2mm_P7.5mm                                 50.2340   -74.6160   90.0000  top
+ST_EXT1   BH10S                 PinHeader_2x05_P2.54mm_Vertical                             86.3550   -85.7300    0.0000  top
+ST_I2C1   Conn_01x05            PinSocket_1x05_P2.54mm_Vertical                             85.1150   -58.3500    0.0000  top
+ST_IR1    Conn_01x04            TerminalBlock_WAGO_236-404_1x04_P5.00mm_45Degree           102.7430   -82.5500  -90.0000  top
+ST_Line1  Screw_Terminal_01x03  TerminalBlock_WAGO_236-403_1x03_P5.00mm_45Degree            38.3860   -79.0640   90.0000  top
+ST_OW1    Screw_Terminal_01x03  TerminalBlock_WAGO_236-403_1x03_P5.00mm_45Degree            74.7460   -69.1830  180.0000  top
+ST_PRG1   Conn_01x05            PinHeader_1x05_P2.54mm_Vertical                            106.0200   -47.4950  180.0000  top
+ST_REL1   Screw_Terminal_01x03  TerminalBlock_WAGO_236-403_1x03_P5.00mm_45Degree            38.3860   -60.5220   90.0000  top
+ST_SI1    Si24R1                PinSocket_1x08_P1.27mm_Vertical                             89.2025   -47.5250  180.0000  top
+ST_nRF1   nRF24L01+             PinHeader_2x04_P2.54mm_Vertical                             95.5775   -46.8850  180.0000  top
+## End
