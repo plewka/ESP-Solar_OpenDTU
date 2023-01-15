@@ -24,3 +24,11 @@ Tradeoff: Very limited space, copyrighted code for ds2485
 
 * TTL serial connector f.e. for IR-Energy reading 
 * robust cage clamps for external connections
+
+The board was done for differend scenarios including HoymilesDTU, using different RF-Modules,
+reading the new IR-Energy counters with "Volkszähler", measure distributed temerature locations 
+with OneWire-Sensors and control of pool pump or heating elements, maybe some IR motion detection 
+in the garage, interfacing RS485/Modbus/RS232 for Solar-Inverters etc. - CAN- and metering bus 
+are missing, though.
+
+Would be great to hear how you used it or modified it for!
