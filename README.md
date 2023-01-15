@@ -7,6 +7,8 @@ LEDs need LightGuides: no. position-drawing and not included in material list
 
 Tradeoff: Very limited space, copyrighted code for ds2485
 
+image::ESP-SolarV1.jpg
+
 * WESP32-WROOM-based (internal or external antenna)
 
 * 5x20 Fuseholder (Supply)
