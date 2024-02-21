@@ -9,3 +9,7 @@ Findige Leute haben das Gerät in mehreren Evolutionsstufen in OpenSource-Projek
 
 https://github.com/tbnobody/OpenDTU
 
+Die Weiterführung des Projekts nennt sich OpenDTU-OnBattery und nutzt den Wechselrichter als Netzeinspeisung aus einer Batterie und Victron-Regler um mit Solarpanels einen Akku zu laden. Das System leistet dann mit einer Energiemessung eine Nulleinspeisung mit Akkupufferung.
+
+https://github.com/helgeerbe/OpenDTU-OnBattery
+
