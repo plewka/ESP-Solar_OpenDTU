@@ -1,0 +1,58 @@
+= Anleitung ESP-Solar
+:author: Jörn Plewka
+:email: joern.plewka@hereon.de
+:revnumber: v0.2
+:revdate: 31.01.2023
+:doctype: book
+:encoding: utf-8
+:lang: de
+:toc: left
+:toclevels: 3
+//:toc: macro
+:showtitle:
+//https://github.com/asciidocfx/AsciidocFX/issues/130
+//https://github.com/asciidocfx/AsciidocFX/issues/114
+//FRONT COVER PAGE
+//PURE IMAGE PAGE ONLY, BEFORE TITLE PAGE
+:front-cover-image: image:esp_solar_box.jpg[]
+//TITLE PAGE
+:title-page:
+//ADD IMAGE IN TITLE PAGE 
+:title-page-background-image: image:title-bg.png[]
+//:title-logo-image: image:hereon_logo.png[top=25%,align=center,pdfwidth=0.5in]
+:chapterdir: chapter
+:icons: image 
+:icontype: svg
+:iconsdir: icons
+:imagesdir: images
+
+////
+Organize your book chapter by chapter
+////
+
+:sectnums!:
+
+include::{chapterdir}/legal.adoc[]
+
+:sectnums:
+:toc:
+//toc::[]
+:toc-title: Inhaltsverzeichnis
+
+:chapter-label: 
+
+include::{chapterdir}/einleitung.adoc[]
+
+include::{chapterdir}/hardware.adoc[]
+
+include::{chapterdir}/leisten.adoc[]
+
+include::{chapterdir}/wlan.adoc[]
+
+include::{chapterdir}/einrichtung.adoc[]
+
+include::{chapterdir}/einstellungen.adoc[]
+
+include::{chapterdir}/info.adoc[]
+
+include::{chapterdir}/liveview.adoc[]
