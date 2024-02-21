@@ -1,0 +1,35 @@
+[legal]
+== Impressum
+
+[cols="1",options="header"]
+|====================
+| Projektdaten: 
+1+| Die beschriebene Baugruppe ist in privater Zeit, mit privaten Ressourcen, für private Zwecke entstanden.
+1+| Da erkennbar war, dass sie auch für einfache wissenschaftliche 
+Aufgaben nützlich sein könnte, ist sie dem Helmholtz Zentrum Hereon
+gewidmet. 
+
+Dies soll auf die wichtige gesellschaftliche Bedeutung der Forschung im Allgemeinen und des Zentrums im Besonderen hinweisen und Interesse dafür wecken.
+
+1+| Die Baugruppe folgt als OpenHardware dem Lizenzgedanken der  GPL-2.0-Lizenz.
+
+|====================
+
+[cols="^1,^1,1,1",options="header"]
+|====================
+//2+| Hersteller: 
+// 2+| Bevollmächtigter:  
+//| a| image::hereon_logo.png[] |  |  Helmholtz-Zentrum Hereon +
+//Technikum +
+//Herr John Hedde
+4+| Das Forschungszentrum finden sie unter folgenen Angaben:
+4+| Postfach: 1160
+4+| Max-Planck-Str.1 
+4+| DE 21502 Geesthacht
+4+| Tel. +49 (0)4152 87-0
+2+| info@hereon.de 
+2+| http://www.hereon.de
+
+//2+| john.hedde@hereon.de
+
+|====================

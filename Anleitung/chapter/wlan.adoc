@@ -1,0 +1,18 @@
+== Einrichtung OpenDTU
+
+=== Anmeldung ins eigene WLAN
+
+Wenn OpenDTU aufgespielt ist, meldet es sich nach dem Einschalten als WLAN-Access-Point. 
+Das Gerät macht also ein eigenes WLAN auf, bei dem man sich z.B. mit dem Handy anmelden kann. Das ist auch der erste Schritt.
+
+* Passwort: openDTU42 
+* Webseite: http://192.168.4.1
+
+Das WLAN heißt OpenDTU-xxxxxx, wobei das xxxxxx aus der WLAN-MAC-Kennung des Prozessors im Gerät erzeugt wird, also individuell ist.
+
+.LiveView
+image::screenshots/01_LiveView.png[]  
+
+* Benutzer: admin
+* Passwort: openDTU42
+

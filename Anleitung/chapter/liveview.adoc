@@ -1,0 +1,22 @@
+=== LiveView-Anzeige
+
+.Live View
+image::screenshots/01_LiveView.png[] 
+
+Die Wechselrichter versorgen sich nur aus dem Sonnenlicht. Wenn sie mehr als den Eigenbedarf von den Solarpanels bekommen,
+speisen sie die Energie ein. Sie unterscheiden daher Power und Power_DC ersteres ist die eigespeiste Leistung, letzteres das, was an Leistung von den Solarpanels kam. 
+
+Die Wechselrichter gibt es mit 1,2 und vier Strings. Je nach Typ sieht die Darstellung dann anders aus.
+
+Der Eigenbedarf ist ca. 1,5 Watt. Abends/morgens gibt es einen Zeitraum, in der der Wechselrichter erreichbar ist, aber noch keine Energie liefert.
+Zwischen den beiden Power-Werten ergibt sich die Efficiency, der Wirkungsgrad.
+
+Yield ist die Energieausbeute. Jeder Wechselrichter schreibt seine Gesamtbilanz und die jedes SolarPanels mit. Dabei erfasst er sowohl den aktuellen Tag als auch die 
+Ausbeute, seit er erstmals aktiviert wurde.
+Die elektrischen Parameter rund um Netzfrequenz, Spannung, Blindleistung nebst Powerfaktor werden auch dargestellt. 
+Der Wechselrichter zeigt auch eine Temperatur an, sie scheint aber nicht besonders genau zu sein. Sicher lässt sich damit aber erkennen, ob er 
+wegen hoher Temperatur ggf. in die Begrenzung gehen muss.
+
+
+
+

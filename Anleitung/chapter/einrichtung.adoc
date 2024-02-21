@@ -1,0 +1,106 @@
+=== Einstellungen
+
+Die Schritte, die man in OpenDTU erledigen muss, sind:
+
+1. Namen des Geräts und das Passwort ändern (beim Passwort wird das aktiv gefordert, sonst werden die Wechselrichter später nicht gelesen!)
+2. Die Inverter mit ihrer Seriennummer eintragen, ihnen einen Namen geben und die 1-4 Eingänge mit den Solarzellen sinnvoll benennen
+3. gucken, ob die Verbindung zum Zeitserver (NTP) korrekt läuft (läuft sie nicht, kommen auch keine Daten vom Inverter)
+4. handelt es sich um einen 800W-Inverter, und man betreibt ein Balkonkraftwerk, muss die Begrenzung noch auf 600W _dauerhaft_ gesetzt werden
+5. wenn man Heimautomatisiserung mit Homeassistant oder einem anderen MQTT-Server betreibt, muss man den auch noch eintragen, damit die Daten übermittelt werden
+
+Um Einstellungen ändern zu können, muss man sich mit obigen Zugangsdaten anmelden. Als erstes wird man das eigene WLAN eintragen und einen Gerätenamen vergeben, den man sich merken kann, z.B. OpenDTU ohne die Endung.
+
+**Fritzbox-Hinweis**
+
+Bei der Fritzbox: http://fritz.box einloggen und dann WLAN-Geräte...und auf das Gerät klicken.
+Die Fritzbox bietet eine Namensauflösung aller angeschlossenen Geräte. Wenn man den Namen des Geräts weiß (anfangs ist das opendtu-xxxxxx - den 
+kann man später aber selber vergeben, s.u.) kann man diesen zukünftig direkt in den Browser eintippen und muss sich keine 
+ggf. veränderne IP-Nummer (192.168.178.x o.ä.) merken.
+
+
+.Settings -> NetworkAdmin
+image::screenshots/02_NetworkAdmin.png[]
+
+Wenn man das eigene WLAN eingestellt hat und die Verbindung erfolgreich war, wird der Access-Point nach einiger Zeit deaktiviert.
+Während das Gerät versucht, sich mit dem eigenen WLAN zu verbinden, ist der AccessPoint eine Zeit lang ggf. nicht erreichbar. Da hilft dann nur warten.
+War die Einstellung erfolgreich, wird man auf dem eigenen WLAN-Router ein neues Gerät im WLAN finden. Natürlich muss dazu dann mit dem Handy auch wieder zurück in das eigene WLAN. 
+
+.Settings -> NTPAdmin
+image::screenshots/03_NtpAdmin.png[]
+
+Die Einstellungen für NTP (Zeitserver) düften in den meisten Fällen direkt funktionieren. Es ist wichtig, dass die Zeit korrekt empfangen wird, sonst bekommt man keine Daten von den Wechselrichtern.
+
+=== Homeautomation
+
+.Settings -> MqttAdmin
+image::screenshots/04_MqttAdmin.png[]
+
+Die MQTT-Einstellungen benötigt man für entsprechende Heimautomatisierungsdienste, wie z.B. Homeassistant.
+
+Die Unterstützung zur Integration in Homeassistant ist in OpenDTU integriert. Homeassistant findet das OpenDTU-Gerät und ermöglicht nach wenigen Klicks die Anzeige
+auf dem gewünschten Dashboard. Man kann auf dem Dashboard dann alle Wechselrichter zusammenrechnen oder die Wetterprognose anzeigen.
+
+.Integration Homeassistant
+image::screenshots/homeassistant.png[]
+
+Sobald ein MQTT-Brockerdienst läuft, kann man z.B. mit dem Programm MqTT-Explorer den Datenverkehr (Topics und Werte) ansehen, der dann so gegliedert ist:
+
+.MqTT Daten mitlesen
+image::screenshots/MQTT_Explorer.png[]
+
+=== Wechselrichter eintragen
+
+.Settings -> Inverter Admin
+image::screenshots/05_InverterAdmin.png[]
+
+In diesen Settings trägt man die Seriennummern der Inverter ein.
+Auf den Invertern befindet sich die Seriennummer einmal als Aufkleber und einmal als Abziehaufkleber. 
+Da das Gerät draußen ggf. die Beschriftung verliert, ist die Idee des Herstellers, den Aufkleber auf die DTU-Einheit zu kleben.
+Wenn die Nummer verloren ist, hat man letztlich keine Chance den Wechselrichter jemals wieder abzufragen. Die Seriennummer ist wie der Schlüssel.
+
+.Inverter Settings
+image::screenshots/13_InverterSettings.png[]
+
+Wenn der Inverter eingetragen ist, kann man mit dem Stiftsymbol weitere Detaileinstellungen pro Inverter machen.
+
+==== Abfragerate und Sendeleistung
+
+.Settings -> DTU Admin
+image::screenshots/06_DtuAdmin.png[]
+
+OpenDTU erzeugt aus der Netzwerkkennung (MAC) für sich selber auch eine Seriennummer für die Verbindung mit den Wechselrichtern. 
+Es dürfte wenig Sinn machen, die zu verändern, möglich ist es aber.
+
+Die Abfragerate ist auf einmal alle 5 sec durch die Regularien zur Funknutzung begrenzt. Daher trifft maximal alle 5 sec. ein neuer Wert ein.
+Bei schlechtem Empfang wird auch mal ein Datensatz fehlen.
+Die Sendeleistung des Funkempfängers lässt sich erhöhen. Das hilft, wenn die Wechselrichter nicht mitbekommen, dass sie abgefragt werden.
+Allerdings erhöhen sie selber wohl nicht die Sendeleistung, weshalb der Empfänger dann das schwache Signal der Wechselrichter korrekt empfangen muss.
+Vermutlich wird es dann nur helfen, das OpenDTU-Gerät näher an die Wechselrichter zu bringen.
+
+==== Firmware
+
+.Firmware Upgrade
+image::screenshots/07_FirmwareUpgrade.png[]
+
+In diesem Dialog lässt sich die Firmware aktualisieren.
+Allerdings muss die Firmware hinsichtlich Belegung der Signale am Prozessor auch passen! Man wird sie nicht im Internet finden.
+
+Die installierte Firmware kann abweichend per MQTT relais=1/relais=0 das Relais ansteuern. 
+
+[env:esp_solar]
+ board = esp32dev
+ build_flags = ${env.build_flags}
+     -DHOYMILES_PIN_MISO=19
+     -DHOYMILES_PIN_MOSI=23
+     -DHOYMILES_PIN_SCLK=18
+     -DHOYMILES_PIN_IRQ=15
+     -DHOYMILES_PIN_CE=4
+     -DHOYMILES
+     _PIN_CS=5
+    
+==== Backup/Werksreset
+
+.Config Management
+image::screenshots/14_ConfigManagement.png[]
+
+In diesem Diealog kann man die Einstellungen sichern oder das Gerät auf den Werkszustand zurücksetzen.

@@ -1,0 +1,30 @@
+=== Wechselrichter
+
+Man findet die individuellen Einstellungen pro Wechselrichter auf dem LiveView, der Willkommensseite nach dem Login.
+Da die Steuerung pro Wechselrichter erfolgt, finden sich diese Bedienfelder -- nach Auswahl eines Wechselrichters (links) -- hinter dem Tacho, IO usw. Symbol (rechts soben).
+
+==== Einspeiseleistung
+
+.Limit Settings
+image::screenshots/15_LimitSettings.png[]
+
+Die Veränderung der Einspeiseleistung heißt hier Limit. 
+Man wählt den Inverter und dann das kleine Tachosymbol. Dort gibt es dann die Einstellung als Betrag oder Prozentwert
+"Set Limit persistent" und "Set Limit Non-Persistent".
+
+Set Limit Persistant ist eine dauerhafte Einstellung und überdauert auch die nächste Nacht. 
+Eine Einstellung mit Non-Persistant verfällt, sobald der Wechselrichter mangels Licht ausgeht.
+
+==== Abschalten
+
+.Power Settings
+image::screenshots/16_PowerSettings.png[]
+
+==== Inverterdaten
+
+.Inverter Info
+image::screenshots/17_InverterInfo.png[]
+
+
+
+

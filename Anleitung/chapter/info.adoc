@@ -1,0 +1,15 @@
+=== Info  
+
+Es gibt auch in OpenDTU Info-Seiten, um die System- und Netzwerkeinstellungen 
+usw. zu kontrollieren. In den Systeminfos wird z.B. auch angezeigt, ob das Funkmodul erreichbar ist.
+
+.Network Info
+image::screenshots/08_NetworkInfo.png[]
+.NTP Info
+image::screenshots/09_NtpInfo.png[]
+.MqTT Info
+image::screenshots/10_MqttInfo.png[]
+.System Info
+image::screenshots/11_SystemInfo.png[]
+.Event log
+image::screenshots/12_Eventlog.png[]

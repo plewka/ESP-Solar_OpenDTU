@@ -1,0 +1,61 @@
+== ESP-Solar Hardware
+
+Die vorliegende Hardware wurde universeller gebaut und hat zusätzliche Fähigkeiten, außer der Kommunikation mit den Invertern, die aber eine veränderte Firmware benötigen, um nutzbar zu sein.
+
+.3D-Rendering ohne Klemmen
+image::ESP-Solar.png[]
+
+=== Bauform
+Wesentliches Designmerkmal war, dass die Baugruppe in eine relativ kleine Verteilerdose passt und ein Netzteil mitbringt, damit sie ohne ein Steckernetzteil direkt vom Stromnetz mit 230V~ betrieben werden kann. Netzspannung birgt immer eine große Lebensgefahr! Die Leiterplatte ist auf der Unterseite an den Lötstellen und auch an einem Schutzelement auf der Oberseite nicht isoliert und an der Oberfläche nur lackiert. Nicht berühren und Abschalten! 
+
+=== (keine) Fixierung
+Die Baugruppe ist nur durch Formschluss in der Dose fixiert. Es gibt ein spezielles Werkzeug für die Klemmen, was keinen Druck auf die Leiterplatte ausübt. Druck auf die Klemmen mit einem Schraubendreher wird auf empfindliche Bauteile an der Unterseite weitergegeben und wird diese zerstören. Die Baugruppe sollte an den Ecken, nach dem Anschrauben der Verteilerdose mit _säurefreiem_ Silikon befestigt werden. Normales Silikon enthält Essigsäure und wird die Leiterplatte zerfressen!
+Es kann zielführend sein, kurze Anschlussdrähte mit zusätzlichen Dosensteckklemmen zu verwenden, zumal der L-Kontakt bei der ersten Version der Leiterplatte sehr schlecht erreichbar ist.
+
+=== Schutzklasse
+Die gewählte Verteilerdose hat eine Schutzklasse von IP67, d.h. sie hat schon recht gute Schaumdichtungen, allerdings hat dies immer Grenzen und ein Platz der regelmäßig nassgeregnet wird, ist sicher nicht für einen dauerhaften Betrieb geeignet und wird zur Ansammlung von Feuchtigkeit und Schäden führen.
+
+=== Sicherung 
+Das Netzteil ist mit einer Feinsicherung (5x20mm, Flink 400mA) und einem Varistor geschützt, was dem Gerät hoffentlich eine lange Lebensdauer beschert. Der Varistor schließt zu hohe Eingangsspannungen ab 350V~ kurz und löst damit zum Schutz die Sicherung aus. Daher darf das Gerät - z.B. bei Prüfungen der Installation - nicht mit höheren Prüfspannungen geprüft werden.
+Vorsicht, den Varistor nicht berühren, seine Beine sind nicht isoliert und es ist möglich diese zu berühren! 
+
+=== Antennenvarianten
+Es gibt Varianten mit interner und externer WLAN-Antenne, je nach Bedarf. Die Ausführung hängt von der Bestückung des Prozessormoduls ab.
+Mit interner Antenne ist Vorsicht geboten, diese nicht zu beschädigen. Bei Version 1 der Leiterplatte müssen die Aussparungen leicht aufgefeilt werden, damit die Platine 
+beim Einbau nicht mit der Antenne verspannt.
+
+=== LEDs
+
+* Die grüne LED zeigt an, dass das Netzteil Spannung liefert. Sie sollte durchgehend leuchten. Tut sie es nicht, ist vermutlich die Sicherung kaputt oder es liegt keine Netzspannung an. 
+* Die rote LED (GPIO25) kann z.B. aktiviert werden, wenn das Relais (GPIO33) angezogen ist. Sie ist aber nicht fest mit der Ansteuerung des Relais gekoppelt. 
+* Eine orange LED könnte z.B. Aktivität auf dem OneWire-Bus oder die Überschreitung eines Grenzwerts anzeigen.
+
+=== Lichtleiter
+
+Wenn es nötig ist, die LEDs von Außen zu sehen, kann man Löcher in den Deckel bohren und Acryl-Licht-Leiter einbauen/einkleben.
+
+Die Position (aus dem Zentrum in Ausrichtung mit lesbaren Logos gesehen) ist: 
+
+[cols="1,1,1"]
+|===
+| *LED* | *X* | *Y*
+| rot  | 17,1mm| -8,4mm 
+| grün | 31,4mm | -8,4mm
+| orange |-4,9mm | 14,7mm
+|===
+
+=== Schwierigkeiten
+Gibt es Schwierigkeiten, kann man mit einem TTL-Seriell-Kabel (Vorsicht: +3.3V bei den Signalen, _keine_ Spannung einspeisen!) 
+bei der Kodierung 8N1 mit 115200bps auf dem Programmierstecker "mithören", wo das Problem liegt. Es gibt auch in OpenDTU Info-Seiten, um die System- und Netzwerkeinstellungen 
+usw. zu kontrollieren. Dort wird auch angezeigt, ob das Funkmodul erreichbar ist.
+
+=== Pläne
+
+.Schaltplan
+image::schematic.png[]
+
+.Bestückung Unterseite
+image::bestueckungSMD.png[]
+
+.Bestückung Unterseite
+image::bestueckung.png[]

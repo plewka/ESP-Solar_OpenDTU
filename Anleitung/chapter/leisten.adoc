@@ -1,0 +1,44 @@
+=== Klemmleisten
+
+Es gibt vier Klemmleisten im Gerät. 
+
+==== Versorgung
+Die Klemmleiste mit der orangen Abdeckplatte, ist für den Netzanschluss, die Energieversorgung gedacht. Es werden L, N und PE angeschlossen. PE wird nur für eine Schutzbarriere auf der Leiterplattenoberfläche (Gefahr durch Feuchtigkeit) verwendet. Die Belegung (von der Mitte aus gesehen) ist: PE, N, L.
+
+==== Relais
+Die Klemmleiste mit der blauen Abdeckplatte ist zum Anschluss des Relais gedacht. 
+Die Belegung (aus Richtung Mitte) ist folgende: Öffner-, Schließer-, Mittelpolkontakt.
+Das Relais hat eine eigene Sicherung am Mittelpolkontakt. Da es sich um ein 10A-Relais handelt, dürfen nur Lasten angeschlossen werden, die 2300Watt ohmsche Leistung nicht überschreiten - bei Motoren usw. auch durch den Anlauf noch deutlich weniger. Die Sicherung ist eine Feinsicherung (5x20mm, Träge 10A). Grundsätzlich ist die Spannung von den 230V~ der Versorgung völlig getrennt, innerhalb einer Verteilerdose dürfen aber keine verschiedenen Sicherungskreise verkabelt werden. Es gibt eine veränderte OpenDTU-Firmware, die das Relais steuern kann.
+
+==== One-Wire
+Die Klemmleiste mit der grauen Abdeckplatte in der Mitte der Leiterplatte bietet einen OneWire-Bus für Temperatursensoren. Der verwendete Controller kann zahlreiche Temperatursensoren über lange Distanzen verwalten und zugänglich machen. Es ist natürlich auch möglich, einen Temperatursensor direkt in die Verteilerdose zu klemmen, um die Innentemperatur zu ermitteln.
+Die DS18B20-Sensoren gibt es als Bauteil im TO-92 Gehäuse, oder eingepresst für Tauchhülsen und Anlegeklammern.
+Die Belegung (vom Netzteilblock aus gesehen) ist: Versorgung +3,3V, Onewire, Masse. Es gibt aktuell eine Firmware auf Basis von ESPHome, die diese Sensoren auswerten kann.
+
+==== IR-Seriell
+Die vierpolige Klemmleiste ist mit einer seriellen Schnittstelle mit TTL-Signalpegel belegt, um z.B. mit einem IR-Lesekopf (Volkszähler) moderne Gebäudeenergiezähler abzufragen.
+Die Belegung (aus der Ecke gesehen) ist: +3V, Masse, Rx, Tx (GPI39, GPIO12). Dies wird gewöhnlich nicht die Anwendung zusammen mit OpenDTU sein, sondern ist eine weitere Einsatzmöglichkeit des Geräts.
+
+=== Stiftleisten 
+
+Der Aufdruck auf der Platine deutet auf deren Funktion. Bei Version 2 sind auch die einzelnen Signale beschriftet.
+
+==== Programmierstecker
+Die Stiftleiste an der Platinenkante ST_PRG über dem Logo ist der Programmierstecker.
+Die Belegung (von der Leiterplattenmitte gesehen) ist folgende: Masse, Prg, +3.3V, Rx, Tx (GPIO0, GPIO3, GPIO1). Es ist übrigens die gleiche Belegung wie bei Shelly1.
+
+==== Funkmodulstecker
+Die doppelreihige Stiftleiste und jene mit dem kleinen Abstand daneben, tragen alternativ ein Funkmodul für die Kommunikation mit den Wechselrichtern.
+Es gibt diese Module in zwei Varianten, daher gibt es dort zwei Steckerpositionen für den gleichen Zweck. Die Module mit dem kleinen Stecker sind gewöhnlich chinesische Nachbauten, 
+während es für den großen Stecker sowohl Nachbauten, als auch Platinen mit dem orginalen reichweitenstärkeren nRF01+ gibt. 
+Bei Version 1 der Leiterplatte sind die Kontakte 1+2 am zweireihigen Stecker vertauscht, weshalb eine hohe Steckleiste verbaut werden muss, mit der die Korrektur erfolgt.
+
+==== I2C-Stecker
+In der Mitte der Leiterplatte, neben Logo und roter LED, ist eine Stiftleiste ST_I2C, die für I2C Messsensoren wie z.B. den BME680 gedacht ist.
+Die Belegung (von den Funksteckern aus gesehen) ist folgende: +3.3V, Masse, Clk, Data, Irq (GPIO14, GPIO13, GPIO15).
+
+==== Olimex Seriell-Stecker
+Die Stiftleiste für Flachbandstecker hat die Belegung zur Nutzung der Olimex-Adapter-Kabel für serielle Schnittstellen mit RS-485 oder RS-232.
+Es es sind nur Betriebsspannung, Sende-, Empfangs- und Richtungssteuerungsleitung belegt. Auf den Halfduplex-RS485-Adaptern müssen entsprechend Brücken verändert werden.
+Die Idee für diese Steckleiste ist die Verwendung des Geräts z.B. als ModbusRTU/TCP-MQTT-Gateway, z.B. in Verbindung mit der Firmware Tasmota, um entsprechende Energiezähler oder Wechselrichter abzufragen.
+

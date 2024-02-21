@@ -1,0 +1,11 @@
+
+= OpenDTU
+
+Für die Solarwechselrichter (engl. Inverter) der Firma Hoymiles kann man eine sogenannte "Digital Transfer Unit" für mehrere 100 Euro kaufen, welche 
+mit den Wechselrichtern Kontakt aufnehmen kann. Die Inverter von Hoymiles werden auch unter anderen Markennamen verkauft, wie z.B. TSUN. 
+Inzwischen gibt es zwei Serien bei Hoymiles, aber nur die ältere HM-xxxx nutzt dieses Nordic-Funkprotokoll.  
+
+Findige Leute haben das Gerät in mehreren Evolutionsstufen in OpenSource-Projekten nachgebaut. Das mündete in das großartige Projekt "OpenDTU". Die Screenshots in dieser Anleitung stammen überwiegend auch aus diesem Projekt!
+
+https://github.com/tbnobody/OpenDTU
+
